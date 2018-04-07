@@ -12,4 +12,8 @@ var DataArchivo = JSON.parse(Archivo);
 
 console.log("El correo es "+ DataArchivo.correo);
 
-DataArchivo.edad = 19;// para agregar info a la Base de Datos
+DataArchivo.edad = 19;//1ra forma para agregar info a la Base de Datos
+DataArchivo["Sexo"] = "Aveces";
+
+var GuardarArchivo = JSON.stringify(DataArchivo);
+fs.writeFileSync('guardando.json',GuardarArchivo);
